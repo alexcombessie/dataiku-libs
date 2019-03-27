@@ -1,3 +1,6 @@
+"""
+An Dataiku DSS visual ML sklearn compatible class with required `fit` and `predict` methods.
+"""
 import pandas as pd
 import numpy as np
 
