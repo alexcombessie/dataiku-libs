@@ -3,7 +3,7 @@ import pandas as pd
 import os
 import pickle
 from datetime import datetime
-print("e")
+
 cluster_columns_dict = {
     "pickup": ["pickup_longitude", "pickup_latitude"],
     "dropoff": ["dropoff_longitude", "dropoff_latitude"],
