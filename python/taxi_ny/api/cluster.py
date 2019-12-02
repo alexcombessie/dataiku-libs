@@ -20,7 +20,7 @@ def load_clusterers(model_folder_path):
     clusterer_dict = {}
     for k,v in cluster_pickle_dict.items():
         pickle_path = os.path.join(model_folder_path, v)
-        clusterer_dict[k] = pickle.load(open(pickle_path, "rb"))
+        clusterer_dict[k] = pickle.load(open(pickle_path, "r"))
     return(clusterer_dict)
 
 def haversine_np(lon1, lat1, lon2, lat2):
