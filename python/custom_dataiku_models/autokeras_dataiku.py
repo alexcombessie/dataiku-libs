@@ -42,7 +42,6 @@ class AutoKerasClassifier(StructuredDataClassifier, BaseEstimator, ClassifierMix
         self.classes_ = [str(i) for i in np.unique(y)]
         super().fit(x = x, y = y, epochs = self.epochs, callbacks = callbacks,
                        validation_split = validation_split, batch_size = self.batch_size, **kwargs)
-        return(self)
 
     def predict(self, x, **kwargs):
         preds = super().predict(x = x, batch_size = self.batch_size, **kwargs)
@@ -82,4 +81,3 @@ class AutoKerasRegressor(StructuredDataRegressor, BaseEstimator, RegressorMixin)
     def fit(self, x = None, y = None, epochs = None, callbacks = None, validation_split = 0.2, **kwargs):
         super().fit(x = x, y = y, epochs = self.epochs, callbacks = callbacks,
                        validation_split = validation_split, batch_size = self.batch_size, **kwargs)
-        return(self)
